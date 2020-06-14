@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=processor/\/home\/oracle\/.m2\/repository\/net\/bytebuddy\/byte-buddy-agent\/1.10.10\/byte-buddy-agent-1.10.10.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/test=/true=/=/maven.groupId=/net.bytebuddy=/=/maven.artifactId=/byte-buddy-agent=/=/maven.version=/1.10.10=/=/maven.scope=/test=/&amp;lt;net.bytebuddy.agent(Attacher.class[Attacher&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="510"/>
+			<item key="DIALOG_WIDTH" value="610"/>
+			<item key="DIALOG_X_ORIGIN" value="546"/>
+			<item key="DIALOG_Y_ORIGIN" value="201"/>
+			<item key="DIALOG_FONT_NAME" value="1|Sans|10.0|0|GTK|1|"/>
+		</section>
+	</section>
+</section>

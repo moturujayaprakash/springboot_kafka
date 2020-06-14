@@ -1,0 +1,38 @@
+package com.example.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Builder
+@Entity
+public class MessageEvent {
+	
+	@Id
+	@GeneratedValue
+	private Integer messageEventId;
+	
+	@Enumerated(EnumType.STRING)
+	private MessageEventType messageEventType;
+	@OneToOne(mappedBy = "messageEvent",cascade = {CascadeType.ALL})
+	@ToString.Exclude
+	private Message message;
+	
+	
+	
+
+}

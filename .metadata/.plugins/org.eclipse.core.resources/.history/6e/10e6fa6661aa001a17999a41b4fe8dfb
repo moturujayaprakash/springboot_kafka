@@ -1,0 +1,9 @@
+package com.example.domain;
+
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+public class Message {
+
+	private String message;
+}

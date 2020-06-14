@@ -1,0 +1,81 @@
+This Dcoument is explaining the how LibraryEventProducer and LibraryEventConsumer will work by using Kafka topic and H2 in-memonry database 
+Assumptions  : Kafaka distribution should be installed on the same server where JDK and STS is using ....
+
+Tech stack :
+        
+
+	1.
+
+	    Operating System : Oracle Entreprise Linux 7.6
+		[oracle@a1 ~]$ cat /etc/oracle-release
+				Oracle Linux Server release 7.6
+		[oracle@a1 ~]$
+
+
+	 2.JDK - JDK11
+
+	    [oracle@a1 ~]$ java -version
+			   java version "11.0.7" 2020-04-14 LTS
+			   Java(TM) SE Runtime Environment 18.9 (build 11.0.7+8-LTS)
+			   Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.7+8-LTS, mixed mode)
+	    [oracle@a1 ~]$
+
+
+            Spring 	: 5.2.6
+            Spring MVC	: 5.2.6
+            Spring Data JAP :5.2.6
+	    Spring boot : 2.3.0.RELEASE
+            lombook	: 1.18.12
+	    ackson-mapper-asl :1.9.13
+
+
+	3.  Jdk Location :  JAVA_HOME
+
+	    [oracle@a1 ~]$ which java
+		/u01/java/jdk-11.0.7/bin/java
+	   [oracle@a1 ~]$
+
+
+	4. IDE 		:  sts-4.6.2.RELEASE
+           Location	:
+
+
+	5. Kafka	:kafka_2.12-2.5.0
+
+	   KAFKA_HOME	: /u01/kafka/kafka_2.12-2.5.0
+
+
+Instructions to use the Application
+
+1. 
+
+	Import Maven existing Projects using  STS
+
+	 a.  LibraryEventProducer
+     	 b.   LibraryEventConsumer
+
+2. Start the Kafka server
+
+    a. go to KAFKA_HOME/bin
+
+    b. Start the zoo-keeper server
+       #./zookeeper-server-start.sh ../config/zookeeper.properties &
+
+    c. Start the kafka brokers (kafka servers)
+
+       #./kafka-server-start.sh ../config/server.properties &
+       #./kafka-server-start.sh ../config/server-1.properties &  
+       #./kafka-server-start.sh ../config/server-2.properties &
+   
+
+	   
+
+3. Start the     LibraryEventProducer from STS
+         a. it will create the topic --library-events with replication 3 if the topic is not there
+         
+4. Start the     LibraryEventConsumer from STS	  
+         b. it will consume the messages from library-events topic and put it in h2 in-memory database
+
+5. Open the Postman and send the messages
+
+6. Check the messages in h2 database

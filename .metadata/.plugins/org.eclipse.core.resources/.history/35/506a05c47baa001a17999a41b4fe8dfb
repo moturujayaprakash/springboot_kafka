@@ -1,0 +1,32 @@
+package com.example.domain;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+public class MessageEvent {
+	
+	private Integer messageEventId;
+	private Message message;
+	public Integer getMessageEventId() {
+		return messageEventId;
+	}
+	public void setMessageEventId(Integer messageEventId) {
+		this.messageEventId = messageEventId;
+	}
+	public Message getMessage() {
+		return message;
+	}
+	public void setMessage(Message message) {
+		this.message = message;
+	}
+	@Override
+	public String toString() {
+		return "MessageEvent [messageEventId=" + messageEventId + ", message=" + message + "]";
+	}
+	
+	
+
+}

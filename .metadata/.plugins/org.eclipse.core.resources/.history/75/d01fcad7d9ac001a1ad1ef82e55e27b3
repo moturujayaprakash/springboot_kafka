@@ -1,0 +1,27 @@
+package com.example.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@Builder
+@Entity
+public class Message {
+
+	private String msg;
+	@OneToOne
+	@JoinColumn(name = "messageEventId")
+	private MessageEvent messageEvent;
+
+	
+	
+}
